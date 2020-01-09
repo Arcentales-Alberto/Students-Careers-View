@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Students-Careers-View">
+  <ClassDiagramComponents>
+    <Class name="BackEnd" package="scv" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getStudents" returnType="ResultSet" visibility="public">
+          <Argument type="String" name="careerName"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ConnectionMySQL" package="scv" visibility="public" xPosition="379.0" yPosition="33.0">
+      <Fields>
+        <Field name="URL" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="USERNAME" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="PASSWORD" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="connection" type="Connection" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="StudentsDAO" package="scv" visibility="public" xPosition="702.0" yPosition="33.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="loadStudents" returnType="ResultSet" visibility="public">
+          <Argument type="String" name="careerName"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="View" package="scv" visibility="public" xPosition="66.0" yPosition="278.0">
+      <Fields>
+        <Field name="backEnd" type="BackEnd" visibility="package"/>
+        <Field name="StudentsTable" type="javax.swing.JTable" visibility="private"/>
+        <Field name="btnCareer" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="txtCareerName" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="txtCareerNameActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnCareerActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="showStudentsTable" returnType="void" visibility="public">
+          <Argument type="ResultSet" name="rs"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="backEnd" source="scv.View" target="scv.BackEnd" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
